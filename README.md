@@ -10,4 +10,4 @@
 
 Use `wizard.py endpoint_name [endpoint_name ...]` to create endpoints
 
-Use name "root" to create "/" endpoint
+Use name `root` to create `/` endpoint
