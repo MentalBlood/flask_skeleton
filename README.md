@@ -6,5 +6,5 @@
 * `endpoints/common.py` -- file that imported by each endpoint main
 * `endpoints/root` -- directory for `/` endpoint
 * `endpoints/x` -- directory for /x endpoint
-* `endpoints/x/main.py` -- file with class describing x endpoint methods
+* `endpoints/x/main.py` -- file with class (one and only) describing x endpoint methods
 
