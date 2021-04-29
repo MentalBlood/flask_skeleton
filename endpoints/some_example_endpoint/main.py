@@ -1,6 +1,5 @@
 from ..common import *
 
-@routedTo(['/some_example_endpoint'], 'some_example_endpoint')
-class root(Resource):
+class some_example_endpoint(Resource):
 	def get(self):
 		return Response(status=200)

@@ -17,8 +17,12 @@ def loadApi(app, api_prefix, endpoints_dir):
 		ep_d_full_path = endpoints_dir + '/' + ep_d
 		if (not os.path.isdir(ep_d_full_path)) or (ep_d == '__pycache__'):
 			continue
-		endpoint_real_name = api_prefix + '/' + ('' if ep_d == 'root' else ep_d)
 		module_path_as_list = [endpoints_dir, ep_d, 'main']
-		resources = getClasses(module_path_as_list)
-		for r in resources:
-			api.add_resource(r, *r.urls, endpoint=endpoint_real_name)
+		resource = getClasses(module_path_as_list)[0]
+		name = '' if ep_d == 'root' else ep_d
+		endpoint_real_name = f'{api_prefix}/{name}'
+		api.add_resource(
+			resource,
+			f'/{name}',
+			endpoint=endpoint_real_name
+		)
