@@ -2,7 +2,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser(description='Script to help create endpoints')
-parser.add_argument('endpoints_names', type=str, nargs='+',
+parser.add_argument('endpoint_name', type=str, nargs='+',
 					help='Use name "root" to create "/" endpoint')
 args = parser.parse_args()
 
