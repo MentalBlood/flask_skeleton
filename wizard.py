@@ -6,7 +6,7 @@ parser.add_argument('endpoint_name', type=str, nargs='+',
 					help='Use name "root" to create "/" endpoint')
 args = parser.parse_args()
 
-for name in args.endpoints_names:
+for name in args.endpoint_name:
 	if os.path.exists(f'endpoints/{name}'):
 		print(f'directory for endpoint "{name}" already exists, skiping')
 		continue
